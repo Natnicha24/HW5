@@ -68,7 +68,7 @@ namespace HW5
             test2[test2.GetLength(1) - 1, test2.GetLength(0) - 1] = returnofaddressofinput[0, 0];
 
             //Convolve
-            double[] mul = new double[9];
+            double[] mul = new double[returnofaddressofconvolution.GetLength(0)*returnofaddressofconvolution.GetLength(1)];
             double[,] mulans = new double[returnofaddressofinput.GetLength(1), returnofaddressofinput.GetLength(0)];
             double[,] output2 = new double[,] { };
             int c = 0,a=0,p=0;
