@@ -30,35 +30,35 @@ namespace HW5
                 }
             }
 
-            //แถวหน้า 
+            //repeatออกมาเป็นแถวหน้า 
             for (i = 0; i < returnofaddressofinput.GetLength(1); i++)
             {
                 h = 0;
                 test2[i + 1, h] = returnofaddressofinput[i, h + returnofaddressofinput.GetLength(0) - 1];
             }
 
-            //แถวหลัง
+            //repeatออกมาเป็นแถวหลัง
             for (i = 0; i < returnofaddressofinput.GetLength(1); i++)
             {
                 h = 0;
                 test2[i + 1, test2.GetLength(1)-1] = returnofaddressofinput[i, h];
             }
 
-            //แถวบน
+            //repeatออกมาเป็นแถวบน
             for (h = 0; h < returnofaddressofinput.GetLength(0); h++)
             {
                 i = 0;
                 test2[i, h + 1] = returnofaddressofinput[returnofaddressofinput.GetLength(1) - 1, h];
             }
 
-            //แถวล่าง
+            //repeatออกมาเป็นแถวล่าง
             for (h = 0; h < returnofaddressofinput.GetLength(0); h++)
             {
                 i = 0;
                 test2[i + test2.GetLength(1) - 1, h + 1] = returnofaddressofinput[i, h];
             }
 
-            //มุม
+            //repeatออกมาเป็นมุม
             test2[0, 0] = returnofaddressofinput[returnofaddressofinput.GetLength(1) - 1, returnofaddressofinput.GetLength(0) - 1];
 
             test2[0, test2.GetLength(0) - 1] = returnofaddressofinput[returnofaddressofinput.GetLength(1) - 1, 0];
